@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import ButtonPrimary from 'shared/Button/ButtonPrimary'
-import imagePng from 'images/hero-right.png'
 import HeroSearchForm from 'components/HeroSearchForm/HeroSearchForm'
 
 export interface SectionHeroProps {

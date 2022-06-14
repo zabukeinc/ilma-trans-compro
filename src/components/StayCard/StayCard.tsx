@@ -56,7 +56,7 @@ const StayCard: FC<StayCardProps> = ({
             {listingCategory.name} · {bedrooms} beds
           </span>
           <div className="flex items-center space-x-2">
-            {isAds && <Badge name="ADS" color="green" />}
+            {/* {isAds && <Badge name="ADS" color="green" />} */}
             <h2
               className={` font-medium capitalize ${
                 size === "default" ? "text-lg" : "text-base"
@@ -90,21 +90,6 @@ const StayCard: FC<StayCardProps> = ({
             )}
             <span className="">{address}</span>
           </div>
-        </div>
-        <div className="w-14 border-b border-neutral-100 dark:border-neutral-800"></div>
-        <div className="flex justify-between items-center">
-          <span className="text-base font-semibold">
-            {price}
-            {` `}
-            {size === "default" && (
-              <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-                /night
-              </span>
-            )}
-          </span>
-          {!!reviewStart && (
-            <StartRating reviewCount={reviewCount} point={reviewStart} />
-          )}
         </div>
       </div>
     );

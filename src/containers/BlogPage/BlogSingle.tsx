@@ -4,12 +4,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Avatar from "shared/Avatar/Avatar";
 import Badge from "shared/Badge/Badge";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
-import Comment from "shared/Comment/Comment";
 import NcImage from "shared/NcImage/NcImage";
 import SocialsList from "shared/SocialsList/SocialsList";
-import Textarea from "shared/Textarea/Textarea";
 import { Helmet } from "react-helmet";
 
 const BlogSingle = () => {
@@ -196,76 +192,6 @@ const BlogSingle = () => {
     );
   };
 
-  const renderAuthor = () => {
-    return (
-      <div className="max-w-screen-md mx-auto ">
-        <div className="nc-SingleAuthor flex">
-          <Avatar sizeClass="w-11 h-11 md:w-24 md:h-24" />
-          <div className="flex flex-col ml-3 max-w-lg sm:ml-5 space-y-1">
-            <span className="text-xs text-neutral-400 uppercase tracking-wider">
-              WRITEN BY
-            </span>
-            <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-200">
-              <a href="/ncmaz/author/the-demo-author-slug">Fones Mimi</a>
-            </h2>
-            <span className="text-sm text-neutral-500 sm:text-base dark:text-neutral-300">
-              There’s no stopping the tech giant. Apple now opens its 100th
-              store in China.There’s no stopping the tech giant.
-              <a
-                className="text-primary-6000 font-medium ml-1"
-                href="/ncmaz/author/the-demo-author-slug"
-              >
-                Readmore
-              </a>
-            </span>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  const renderCommentForm = () => {
-    return (
-      <div className="max-w-screen-md mx-auto pt-5">
-        <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-200">
-          Responses (14)
-        </h3>
-        <form className="nc-SingleCommentForm mt-5">
-          <Textarea />
-          <div className="mt-2 space-x-3">
-            <ButtonPrimary>Submit</ButtonPrimary>
-            <ButtonSecondary>Cancel</ButtonSecondary>
-          </div>
-        </form>
-      </div>
-    );
-  };
-
-  const renderCommentLists = () => {
-    return (
-      <div className="max-w-screen-md mx-auto">
-        <ul className="nc-SingleCommentLists space-y-5">
-          <li>
-            <Comment />
-            <ul className="pl-4 mt-5 space-y-5 md:pl-11">
-              <li>
-                <Comment isSmall />
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Comment />
-            <ul className="pl-4 mt-5 space-y-5 md:pl-11">
-              <li>
-                <Comment isSmall />
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    );
-  };
-
   const renderPostRelated = (post: PostDataType) => {
     return (
       <div
@@ -314,10 +240,6 @@ const BlogSingle = () => {
       <div className="nc-SingleContent container space-y-10">
         {renderContent()}
         {renderTags()}
-        <div className="max-w-screen-md mx-auto border-b border-t border-neutral-100 dark:border-neutral-700"></div>
-        {renderAuthor()}
-        {renderCommentForm()}
-        {renderCommentLists()}
       </div>
       <div className="relative bg-neutral-100 dark:bg-neutral-800 py-16 lg:py-28 mt-16 lg:mt-24">
         <div className="container ">
