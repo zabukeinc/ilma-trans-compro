@@ -79,6 +79,7 @@
     "autoprefixer": "^9",
     "postcss": "^7",
     "redux-logger": "^3.0.6",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "cogent": "^1.0.1"
   }
 }
