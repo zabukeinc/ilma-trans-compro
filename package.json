@@ -80,6 +80,6 @@
     "postcss": "^7",
     "redux-logger": "^3.0.6",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "cogent": "https://github.com/cojs/cogent.git"
+    "cogent": "file:../vendors/cogent"
   }
 }
