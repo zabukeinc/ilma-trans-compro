@@ -3820,7 +3820,7 @@ coa@^2.0.2:
     statuses "^1.0.2"
     write-to "^1.0.0"
 
-"cogent@git://github.com/timaschew/cogent#fix-redirects":
+"cogent@https://github.com/timaschew/cogent#fix-redirects":
   version "0.4.3-fix-redirects"
   resolved "git://github.com/timaschew/cogent#2246bd071392f5053a3a110024fd608a40a593ba"
   dependencies:
