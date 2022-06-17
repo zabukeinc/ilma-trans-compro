@@ -4,10 +4,8 @@ import Logo from "shared/Logo/Logo";
 import { Disclosure } from "@headlessui/react";
 import { NavLink } from "react-router-dom";
 import { NavItemType } from "./NavigationItem";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
 import SocialsList from "shared/SocialsList/SocialsList";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import SwitchDarkMode from "shared/SwitchDarkMode/SwitchDarkMode";
 import { NAVIGATIONS } from "data/navigations";
 
 export interface NavMobileProps {
@@ -123,9 +121,6 @@ const NavMobile: React.FC<NavMobileProps> = ({
 
           <div className="flex justify-between items-center mt-4">
             <SocialsList itemClass="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-100 text-xl dark:bg-neutral-800 dark:text-neutral-300" />
-            <span className="block">
-              <SwitchDarkMode className="bg-neutral-100 dark:bg-neutral-800" />
-            </span>
           </div>
         </div>
         <span className="absolute right-2 top-2 p-1">
@@ -135,11 +130,6 @@ const NavMobile: React.FC<NavMobileProps> = ({
       <ul className="flex flex-col py-6 px-2 space-y-1">
         {data.map(_renderItem)}
       </ul>
-      <div className="flex items-center justify-between py-6 px-5 space-x-4">
-        <a href="/#" target="_blank" rel="noopener noreferrer">
-          <ButtonPrimary>Get Template</ButtonPrimary>
-        </a>
-      </div>
     </div>
   );
 };

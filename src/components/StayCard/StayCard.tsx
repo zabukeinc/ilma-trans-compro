@@ -2,11 +2,7 @@ import React, { FC } from "react";
 import GallerySlider from "components/GallerySlider/GallerySlider";
 import { DEMO_STAY_LISTINGS } from "data/listings";
 import { StayDataType } from "data/types";
-import StartRating from "components/StartRating/StartRating";
 import { Link } from "react-router-dom";
-import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon";
-import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge";
-import Badge from "shared/Badge/Badge";
 
 export interface StayCardProps {
   className?: string;
@@ -30,20 +26,12 @@ const StayCard: FC<StayCardProps> = ({
     title,
     bedrooms,
     href,
-    like,
-    saleOff,
-    isAds,
-    price,
-    reviewStart,
-    reviewCount,
   } = data;
 
   const renderSliderGallery = () => {
     return (
       <div className="relative w-full">
         <GallerySlider ratioClass={ratioClass} galleryImgs={galleryImgs} />
-        <BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />
-        {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
     );
   };

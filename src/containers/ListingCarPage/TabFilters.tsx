@@ -26,21 +26,21 @@ const carSpecifications = [
 
 const rangePrices = [
   {
-    name: "$ 0 - 20",
+    name: "IDR. 300.000, - IDR. 500.000",
   },
   {
-    name: "$ 20 - 50",
+    name: "IDR. 500.000, - IDR. 1.000.000",
     defaultChecked: true,
   },
   {
-    name: "$ 50 - 100",
+    name: "IDR. 1.000.000, - IDR. 2.000.000",
     defaultChecked: true,
   },
   {
-    name: "$ 100 - 200",
+    name: "IDR. 2.000.000, - IDR. 3.000.000",
   },
   {
-    name: "> $1,000",
+    name: "IDR. 3.000.000, - IDR. 4.000.000",
   },
 ];
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logoImg from "images/logo.png";
-import logoLightImg from "images/logo-light.png";
+import logoImg from "images/logo_ilmatrans.png";
 
 export interface LogoProps {
   img?: string;
@@ -11,7 +10,7 @@ export interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({
   img = logoImg,
-  imgLight = logoLightImg,
+  imgLight = logoImg,
   className = "",
 }) => {
   return (
@@ -21,14 +20,15 @@ const Logo: React.FC<LogoProps> = ({
     >
       {/* THIS USE FOR MY CLIENT */}
       {/* PLEASE UN COMMENT BELLOW CODE AND USE IT */}
-      {img ? "Ilma Trans"
-      // (
-      //   <img
-      //     className={`block max-h-12 ${imgLight ? "dark:hidden" : ""}`}
-      //     src={img}
-      //     alt="Logo"
-      //   />
-      // )
+      {img ? 
+      (
+        <img
+          className={`block max-h-14 ${imgLight ? "dark:hidden" : ""}`}
+          style={{ maxWidth: "150px" }}
+          src={img}
+          alt="Logo"
+        />
+      )
        : (
         "Ilma Trans"
       )}

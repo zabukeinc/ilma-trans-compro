@@ -1,97 +1,97 @@
-import React, { Fragment, useState } from "react";
-import { Dialog, Popover, Transition } from "@headlessui/react";
-import NcInputNumber from "components/NcInputNumber/NcInputNumber";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonThird from "shared/Button/ButtonThird";
-import ButtonClose from "shared/ButtonClose/ButtonClose";
-import Checkbox from "shared/Checkbox/Checkbox";
+import React, { Fragment, useState } from 'react'
+import { Dialog, Popover, Transition } from '@headlessui/react'
+import NcInputNumber from 'components/NcInputNumber/NcInputNumber'
+import ButtonPrimary from 'shared/Button/ButtonPrimary'
+import ButtonThird from 'shared/Button/ButtonThird'
+import ButtonClose from 'shared/ButtonClose/ButtonClose'
+import Checkbox from 'shared/Checkbox/Checkbox'
 
 // DEMO DATA
 const typeOfPaces = [
   {
-    name: "Entire place",
-    description: "Have a place to yourself",
+    name: 'Entire place',
+    description: 'Have a place to yourself'
   },
   {
-    name: "Private room",
-    description: "Have your own room and share some common spaces",
+    name: 'Private room',
+    description: 'Have your own room and share some common spaces'
   },
   {
-    name: "Hotel room",
+    name: 'Hotel room',
     description:
-      "Have a private or shared room in a boutique hotel, hostel, and more",
+      'Have a private or shared room in a boutique hotel, hostel, and more'
   },
   {
-    name: "Shared room",
-    description: "Stay in a shared space, like a common room",
-  },
-];
+    name: 'Shared room',
+    description: 'Stay in a shared space, like a common room'
+  }
+]
 
 const rangePrices = [
   {
-    name: "$ 0 - 20",
+    name: 'IDR. 300.000, - IDR. 500.000'
   },
   {
-    name: "$ 20 - 50",
-    defaultChecked: true,
+    name: 'IDR. 500.000, - IDR. 1.000.000',
+    defaultChecked: true
   },
   {
-    name: "$ 50 - 100",
-    defaultChecked: true,
+    name: 'IDR. 1.000.000, - IDR. 2.000.000',
+    defaultChecked: true
   },
   {
-    name: "$ 100 - 200",
+    name: 'IDR. 2.000.000, - IDR. 3.000.000'
   },
   {
-    name: "> $1,000",
-  },
-];
+    name: 'IDR. 3.000.000, - IDR. 4.000.000'
+  }
+]
 
 const moreFilter1 = [
-  { name: "Kitchen", defaultChecked: true },
-  { name: "Air conditioning", defaultChecked: true },
-  { name: "Heating" },
-  { name: "Dryer" },
-  { name: "Washer" },
-  { name: "Wifi" },
-  { name: "Indoor fireplace" },
-  { name: "Breakfast" },
-  { name: "Hair dryer" },
-  { name: " Dedicated workspace" },
-];
+  { name: 'Kitchen', defaultChecked: true },
+  { name: 'Air conditioning', defaultChecked: true },
+  { name: 'Heating' },
+  { name: 'Dryer' },
+  { name: 'Washer' },
+  { name: 'Wifi' },
+  { name: 'Indoor fireplace' },
+  { name: 'Breakfast' },
+  { name: 'Hair dryer' },
+  { name: ' Dedicated workspace' }
+]
 
 const moreFilter2 = [
-  { name: " Free parking on premise" },
-  { name: "Hot tub" },
-  { name: "Gym" },
-  { name: " Pool" },
-  { name: " EV charger" },
-];
+  { name: ' Free parking on premise' },
+  { name: 'Hot tub' },
+  { name: 'Gym' },
+  { name: ' Pool' },
+  { name: ' EV charger' }
+]
 
 const moreFilter3 = [
-  { name: " House" },
-  { name: "Bed and breakfast" },
-  { name: "Apartment", defaultChecked: true },
-  { name: " Boutique hotel" },
-  { name: " Bungalow" },
-  { name: " Chalet", defaultChecked: true },
-  { name: " Condominium", defaultChecked: true },
-  { name: " Cottage" },
-  { name: " Guest suite" },
-  { name: " Guesthouse" },
-];
+  { name: ' House' },
+  { name: 'Bed and breakfast' },
+  { name: 'Apartment', defaultChecked: true },
+  { name: ' Boutique hotel' },
+  { name: ' Bungalow' },
+  { name: ' Chalet', defaultChecked: true },
+  { name: ' Condominium', defaultChecked: true },
+  { name: ' Cottage' },
+  { name: ' Guest suite' },
+  { name: ' Guesthouse' }
+]
 
-const moreFilter4 = [{ name: " Pets allowed" }, { name: "Smoking allowed" }];
+const moreFilter4 = [{ name: ' Pets allowed' }, { name: 'Smoking allowed' }]
 
 const TabFilters = () => {
-  const [isOpenMoreFilter, setisOpenMoreFilter] = useState(false);
-  const [isOpenMoreFilterMobile, setisOpenMoreFilterMobile] = useState(false);
+  const [isOpenMoreFilter, setisOpenMoreFilter] = useState(false)
+  const [isOpenMoreFilterMobile, setisOpenMoreFilterMobile] = useState(false)
   //
-  const closeModalMoreFilter = () => setisOpenMoreFilter(false);
-  const openModalMoreFilter = () => setisOpenMoreFilter(true);
+  const closeModalMoreFilter = () => setisOpenMoreFilter(false)
+  const openModalMoreFilter = () => setisOpenMoreFilter(true)
   //
-  const closeModalMoreFilterMobile = () => setisOpenMoreFilterMobile(false);
-  const openModalMoreFilterMobile = () => setisOpenMoreFilterMobile(true);
+  const closeModalMoreFilterMobile = () => setisOpenMoreFilterMobile(false)
+  const openModalMoreFilterMobile = () => setisOpenMoreFilterMobile(true)
 
   const renderXClear = () => {
     return (
@@ -109,8 +109,8 @@ const TabFilters = () => {
           />
         </svg>
       </span>
-    );
-  };
+    )
+  }
 
   const renderTabsPriceRage = () => {
     return (
@@ -120,7 +120,7 @@ const TabFilters = () => {
             <Popover.Button
               className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-primary-500 bg-primary-50 text-primary-700 focus:outline-none `}
             >
-              <span>$20 - $100</span>
+              <span>IDR. 500.000, - IDR. 1.000.000,-</span>
               {renderXClear()}
             </Popover.Button>
             <Transition
@@ -219,17 +219,17 @@ const TabFilters = () => {
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
 
   const renderMoreFilterItem = (
     data: {
-      name: string;
-      defaultChecked?: boolean;
+      name: string
+      defaultChecked?: boolean
     }[]
   ) => {
-    const list1 = data.filter((_, i) => i < data.length / 2);
-    const list2 = data.filter((_, i) => i >= data.length / 2);
+    const list1 = data.filter((_, i) => i < data.length / 2)
+    const list2 = data.filter((_, i) => i >= data.length / 2)
     return (
       <div className="grid grid-cols-2 gap-8">
         <div className="flex flex-col space-y-5">
@@ -253,8 +253,8 @@ const TabFilters = () => {
           ))}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderTabMoreFilter = () => {
     return (
@@ -364,8 +364,8 @@ const TabFilters = () => {
           </Dialog>
         </Transition>
       </div>
-    );
-  };
+    )
+  }
 
   const renderTabMoreFilterMobile = () => {
     return (
@@ -508,8 +508,8 @@ const TabFilters = () => {
           </Dialog>
         </Transition>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className="flex lg:space-x-4">
@@ -519,7 +519,7 @@ const TabFilters = () => {
       </div>
       {renderTabMoreFilterMobile()}
     </div>
-  );
-};
+  )
+}
 
-export default TabFilters;
+export default TabFilters
