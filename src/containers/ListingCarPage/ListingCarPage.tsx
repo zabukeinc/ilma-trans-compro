@@ -72,7 +72,7 @@ const ListingCarPage: FC<ListingCarPageProps> = ({ className = "" }) => {
       data-nc-id="ListingCarPage"
     >
       <Helmet>
-        <title>Chisfis || Booking React Template</title>
+        <title>Chisfis || BookingIlma Trans</title>
       </Helmet>
       <BgGlassmorphism />
 

@@ -228,7 +228,7 @@ const BlogSingle = () => {
   return (
     <div className="nc-PageSingle pt-8 lg:pt-16 ">
       <Helmet>
-        <title>Single Blog || Booking React Template</title>
+        <title>Single Blog || Ilma Trans</title>
       </Helmet>
       {renderHeader()}
       <NcImage
