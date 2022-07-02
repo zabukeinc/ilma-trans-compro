@@ -1,5 +1,5 @@
 import { TwMainColor } from "data/types";
-import React, { FC, ReactNode } from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
 
 export interface BadgeProps {

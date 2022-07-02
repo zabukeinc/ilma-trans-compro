@@ -5,7 +5,6 @@ import StayDatesRangeInput from 'components/HeroSearchForm/StayDatesRangeInput'
 import { DateRage } from 'components/HeroSearchForm/StaySearchForm'
 import useWindowSize from 'hooks/useWindowResize'
 import moment from 'moment'
-import { FocusedInputShape } from 'react-dates'
 import Badge from 'shared/Badge/Badge'
 import ButtonPrimary from 'shared/Button/ButtonPrimary'
 import ButtonSecondary from 'shared/Button/ButtonSecondary'
@@ -71,24 +70,9 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     endDate: moment().add(4, 'days')
   })
 
-  const [focusedInputSectionCheckDate, setFocusedInputSectionCheckDate] =
-    useState<FocusedInputShape>('startDate')
   let [isOpenModalAmenities, setIsOpenModalAmenities] = useState(false)
 
   const windowSize = useWindowSize()
-
-  const getDaySize = () => {
-    if (windowSize.width <= 375) {
-      return 34
-    }
-    if (windowSize.width <= 500) {
-      return undefined
-    }
-    if (windowSize.width <= 1280) {
-      return 56
-    }
-    return 48
-  }
 
   function closeModalAmenities() {
     setIsOpenModalAmenities(false)

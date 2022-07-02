@@ -41,8 +41,6 @@ const toursType = [
   { name: 'Sea Tour' },
 ]
 
-const moreFilter4 = [{ name: ' Pets allowed' }, { name: 'Smoking allowed' }]
-
 const TabFilters = () => {
   const [isOpenMoreFilter, setisOpenMoreFilter] = useState(false)
   const [isOpenMoreFilterMobile, setisOpenMoreFilterMobile] = useState(false)
