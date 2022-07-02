@@ -1,32 +1,11 @@
 import React, { Fragment, useState } from 'react'
 import { Dialog, Popover, Transition } from '@headlessui/react'
-import NcInputNumber from 'components/NcInputNumber/NcInputNumber'
 import ButtonPrimary from 'shared/Button/ButtonPrimary'
 import ButtonThird from 'shared/Button/ButtonThird'
 import ButtonClose from 'shared/ButtonClose/ButtonClose'
 import Checkbox from 'shared/Checkbox/Checkbox'
 
 // DEMO DATA
-const typeOfPaces = [
-  {
-    name: 'Entire place',
-    description: 'Have a place to yourself'
-  },
-  {
-    name: 'Private room',
-    description: 'Have your own room and share some common spaces'
-  },
-  {
-    name: 'Hotel room',
-    description:
-      'Have a private or shared room in a boutique hotel, hostel, and more'
-  },
-  {
-    name: 'Shared room',
-    description: 'Stay in a shared space, like a common room'
-  }
-]
-
 const rangePrices = [
   {
     name: 'IDR. 300.000, - IDR. 500.000'
@@ -47,20 +26,7 @@ const rangePrices = [
   }
 ]
 
-const moreFilter1 = [
-  { name: 'Kitchen', defaultChecked: true },
-  { name: 'Air conditioning', defaultChecked: true },
-  { name: 'Heating' },
-  { name: 'Dryer' },
-  { name: 'Washer' },
-  { name: 'Wifi' },
-  { name: 'Indoor fireplace' },
-  { name: 'Breakfast' },
-  { name: 'Hair dryer' },
-  { name: ' Dedicated workspace' }
-]
-
-const moreFilter2 = [
+const priorityTourFilters = [
   { name: 'Mandalika' },
   { name: 'Bali' },
   { name: 'Borobudur' },
@@ -68,7 +34,7 @@ const moreFilter2 = [
   { name: 'Cikupang' }
 ]
 
-const moreFilter3 = [
+const toursType = [
   { name: 'Romance Tour' },
   { name: 'Adventure Tour' },
   { name: 'City Tour', defaultChecked: true },
@@ -314,13 +280,13 @@ const TabFilters = () => {
                       <div className="py-7">
                         <h3 className="text-xl font-medium">Priority Tours</h3>
                         <div className="mt-6 relative ">
-                          {renderMoreFilterItem(moreFilter2)}
+                          {renderMoreFilterItem(priorityTourFilters)}
                         </div>
                       </div>
                       <div className="py-7">
                         <h3 className="text-xl font-medium">Tours Type</h3>
                         <div className="mt-6 relative ">
-                          {renderMoreFilterItem(moreFilter3)}
+                          {renderMoreFilterItem(toursType)}
                         </div>
                       </div>
                     </div>
@@ -412,14 +378,6 @@ const TabFilters = () => {
                     <div className="px-10 divide-y divide-neutral-200 dark:divide-neutral-800">
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Type of place</h3>
-                        <div className="mt-6 relative ">
-                          {renderMoreFilterItem(typeOfPaces)}
-                        </div>
-                      </div>
-
-                      {/* ---- */}
-                      <div className="py-7">
                         <h3 className="text-xl font-medium">Range Prices</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(rangePrices)}
@@ -428,43 +386,17 @@ const TabFilters = () => {
 
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Rooms and beds</h3>
-                        <div className="mt-6 relative flex flex-col space-y-5">
-                          <NcInputNumber label="Beds" max={10} />
-                          <NcInputNumber label="Bedrooms" max={10} />
-                          <NcInputNumber label="Bathrooms" max={10} />
+                        <h3 className="text-xl font-medium">Priority Tours</h3>
+                        <div className="mt-6 relative ">
+                          {renderMoreFilterItem(priorityTourFilters)}
                         </div>
                       </div>
 
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Amenities</h3>
+                        <h3 className="text-xl font-medium">Tours Type</h3>
                         <div className="mt-6 relative ">
-                          {renderMoreFilterItem(moreFilter1)}
-                        </div>
-                      </div>
-
-                      {/* ---- */}
-                      <div className="py-7">
-                        <h3 className="text-xl font-medium">Facilities</h3>
-                        <div className="mt-6 relative ">
-                          {renderMoreFilterItem(moreFilter2)}
-                        </div>
-                      </div>
-
-                      {/* ---- */}
-                      <div className="py-7">
-                        <h3 className="text-xl font-medium">Property type</h3>
-                        <div className="mt-6 relative ">
-                          {renderMoreFilterItem(moreFilter3)}
-                        </div>
-                      </div>
-
-                      {/* ---- */}
-                      <div className="py-7">
-                        <h3 className="text-xl font-medium">House rules</h3>
-                        <div className="mt-6 relative ">
-                          {renderMoreFilterItem(moreFilter4)}
+                          {renderMoreFilterItem(toursType)}
                         </div>
                       </div>
                     </div>
