@@ -1,20 +1,16 @@
 import React, { FC, Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import LocationMarker from 'components/AnyReactComponent/LocationMarker'
 import GuestsInput from 'components/HeroSearchForm/GuestsInput'
 import StayDatesRangeInput from 'components/HeroSearchForm/StayDatesRangeInput'
 import { DateRage } from 'components/HeroSearchForm/StaySearchForm'
-import GoogleMapReact from 'google-map-react'
 import useWindowSize from 'hooks/useWindowResize'
 import moment from 'moment'
 import { FocusedInputShape } from 'react-dates'
-import Avatar from 'shared/Avatar/Avatar'
 import Badge from 'shared/Badge/Badge'
 import ButtonPrimary from 'shared/Button/ButtonPrimary'
 import ButtonSecondary from 'shared/Button/ButtonSecondary'
 import ButtonClose from 'shared/ButtonClose/ButtonClose'
 import NcImage from 'shared/NcImage/NcImage'
-import LikeSaveBtns from './LikeSaveBtns'
 import ModalPhotos from './ModalPhotos'
 
 export interface ListingStayDetailPageProps {
@@ -114,7 +110,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       <div className="listingSection__wrap !space-y-6">
         {/* 1 */}
         <div className="flex justify-between items-center">
-          <Badge name="My Trip My Adventure" />
+          <Badge name="Priority Tours" />
+          <Badge name="Advance Tours" />
         </div>
 
         {/* 2 */}
@@ -130,47 +127,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             <span className="ml-1"> Bali, Indonesia</span>
           </span>
         </div>
-
-        {/* 4 */}
-        <div className="flex items-center">
-          <Avatar sizeClass="h-10 w-10" radius="rounded-full" />
-          <span className="ml-2.5 text-neutral-500 dark:text-neutral-400">
-            Hosted by{' '}
-            <span className="text-neutral-900 dark:text-neutral-200 font-medium">
-              Kevin Francis
-            </span>
-          </span>
-        </div>
-
-        {/* 5 */}
-
-        {/* 6 */}
-        {/* <div className="flex items-center justify-between xl:justify-start space-x-8 xl:space-x-12 text-sm text-neutral-700 dark:text-neutral-300">
-          <div className="flex items-center space-x-3 ">
-            <i className=" las la-user text-2xl "></i>
-            <span className="">
-              6 <span className="hidden sm:inline-block">guests</span>
-            </span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <i className=" las la-bed text-2xl"></i>
-            <span className=" ">
-              6 <span className="hidden sm:inline-block">beds</span>
-            </span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <i className=" las la-bath text-2xl"></i>
-            <span className=" ">
-              3 <span className="hidden sm:inline-block">baths</span>
-            </span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <i className=" las la-door-open text-2xl"></i>
-            <span className=" ">
-              2 <span className="hidden sm:inline-block">bedrooms</span>
-            </span>
-          </div>
-        </div> */}
       </div>
     )
   }
@@ -314,88 +270,9 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         <div>
           <h2 className="text-2xl font-semibold">Location</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            San Diego, CA, United States of America (SAN-San Diego Intl.)
+            Kavling Anggaraja Regency No.5, Cipageran, Kec. Cimahi Utara, Kota
+            Cimahi, Jawa Barat 40511
           </span>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-
-        {/* MAP */}
-        <div className="aspect-w-5 aspect-h-5 sm:aspect-h-3">
-          <div className="rounded-xl overflow-hidden">
-            <GoogleMapReact
-              bootstrapURLKeys={{
-                key: 'AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0'
-              }}
-              defaultZoom={15}
-              yesIWantToUseGoogleMapApiInternals
-              defaultCenter={{
-                lat: 55.9607277,
-                lng: 36.2172614
-              }}
-            >
-              <LocationMarker lat={55.9607277} lng={36.2172614} />
-            </GoogleMapReact>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  const renderSection8 = () => {
-    return (
-      <div className="listingSection__wrap">
-        {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Things to know</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-
-        {/* CONTENT */}
-        <div>
-          <h4 className="text-lg font-semibold">Cancellation policy</h4>
-          <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
-            Refund 50% of the booking value when customers cancel the room
-            within 48 hours after successful booking and 14 days before the
-            order time. <br />
-            Then, cancel the room 14 days before the order time, get a 50%
-            refund of the total amount paid (minus the service fee).
-          </span>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-
-        {/* CONTENT */}
-        <div>
-          <h4 className="text-lg font-semibold">Barang bawaan</h4>
-          <div className="mt-3 text-neutral-500 dark:text-neutral-400 max-w-md text-sm sm:text-base">
-            <div className="flex space-x-10 justify-between p-3 bg-neutral-100 dark:bg-neutral-800 rounded-lg">
-              <span>Pakaian ganti</span>
-            </div>
-            <div className="flex space-x-10 justify-between p-3">
-              <span>Snack Pribadi</span>
-            </div>
-            <div className="flex space-x-10 justify-between p-3 bg-neutral-100 dark:bg-neutral-800 rounded-lg">
-              <span>PowerBank</span>
-            </div>
-            <div className="flex space-x-10 justify-between p-3">
-              <span>Kamera</span>
-            </div>
-            <div className="flex space-x-10 justify-between p-3 bg-neutral-100 dark:bg-neutral-800 rounded-lg">
-              <span>Obat Pribadi</span>
-            </div>
-          </div>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-
-        {/* CONTENT */}
-        <div>
-          <h4 className="text-lg font-semibold">Special Note</h4>
-          <div className="prose sm:prose">
-            <ul className="mt-3 text-neutral-500 dark:text-neutral-400 space-y-2">
-              <li>
-                Ban and I will work together to keep the landscape and
-                environment green and clean by not littering, not using
-                stimulants and respecting people around.
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     )
@@ -423,9 +300,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <GuestsInput
             fieldClassName="p-5"
             defaultValue={{
-              guestAdults: 1,
-              guestChildren: 2,
-              guestInfants: 0
+              guests: 1,
             }}
           />
         </form>
@@ -520,7 +395,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           {renderSection2()}
           {renderSection3()}
           {renderSection7()}
-          {renderSection8()}
         </div>
 
         {/* SIDEBAR */}

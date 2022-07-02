@@ -6,8 +6,6 @@ export const NAVIGATIONS: NavItemType[] = [
     id: ncNanoId(),
     href: "/",
     name: "Home",
-    // type: "dropdown",
-    // children: demoChildMenus,
   },
 
   // Destinations Menu
@@ -42,49 +40,6 @@ export const NAVIGATIONS: NavItemType[] = [
       { id: ncNanoId(), href: "/listing-stay", name: "Bali" },
       { id: ncNanoId(), href: "/listing-stay", name: "NTB" },
       { id: ncNanoId(), href: "/listing-stay", name: "NTT" },
-    ],
-  },
-
-  // Priority Tours Menu
-  {
-    id: ncNanoId(),
-    href: "#",
-    name: "Priority Tours",
-    type: "dropdown",
-    children: [
-      { id: ncNanoId(), href: "/listing-stay", name: "Mandalika" },
-      { id: ncNanoId(), href: "/listing-stay", name: "Bali" },
-      { id: ncNanoId(), href: "/listing-stay", name: "Borobudur" },
-      //
-      {
-        id: ncNanoId(),
-        href: "/listing-stay",
-        name: "Labuan Bajo",
-      },
-      {
-        id: ncNanoId(),
-        href: "/listing-stay",
-        name: "Cikupang",
-      },
-      {
-        id: ncNanoId(),
-        href: "/listing-stay",
-        name: "Likupang",
-      },
-    ],
-  },
-
-  // Tours Type Menu
-  {
-    id: ncNanoId(),
-    href: "#",
-    name: "Tours Type",
-    type: "dropdown",
-    children: [
-      { id: ncNanoId(), href: "/listing-stay", name: "Romance Tour" },
-      { id: ncNanoId(), href: "/listing-stay", name: "Adventure Tour" },
-      { id: ncNanoId(), href: "/listing-stay", name: "City Tour" },
-      { id: ncNanoId(), href: "/listing-stay", name: "Sea Tour" },
     ],
   },
 

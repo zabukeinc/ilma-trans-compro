@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import rightImg from "images/our-features.png";
 import NcImage from "shared/NcImage/NcImage";
 import Badge from "shared/Badge/Badge";
 

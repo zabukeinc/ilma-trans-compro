@@ -61,24 +61,18 @@ const moreFilter1 = [
 ]
 
 const moreFilter2 = [
-  { name: ' Free parking on premise' },
-  { name: 'Hot tub' },
-  { name: 'Gym' },
-  { name: ' Pool' },
-  { name: ' EV charger' }
+  { name: 'Mandalika' },
+  { name: 'Bali' },
+  { name: 'Borobudur' },
+  { name: 'Labuan Bajo' },
+  { name: 'Cikupang' }
 ]
 
 const moreFilter3 = [
-  { name: ' House' },
-  { name: 'Bed and breakfast' },
-  { name: 'Apartment', defaultChecked: true },
-  { name: ' Boutique hotel' },
-  { name: ' Bungalow' },
-  { name: ' Chalet', defaultChecked: true },
-  { name: ' Condominium', defaultChecked: true },
-  { name: ' Cottage' },
-  { name: ' Guest suite' },
-  { name: ' Guesthouse' }
+  { name: 'Romance Tour' },
+  { name: 'Adventure Tour' },
+  { name: 'City Tour', defaultChecked: true },
+  { name: 'Sea Tour' },
 ]
 
 const moreFilter4 = [{ name: ' Pets allowed' }, { name: 'Smoking allowed' }]
@@ -318,27 +312,15 @@ const TabFilters = () => {
                   <div className="flex-grow overflow-y-auto">
                     <div className="px-10 divide-y divide-neutral-200 dark:divide-neutral-800">
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Amenities</h3>
-                        <div className="mt-6 relative ">
-                          {renderMoreFilterItem(moreFilter1)}
-                        </div>
-                      </div>
-                      <div className="py-7">
-                        <h3 className="text-xl font-medium">Facilities</h3>
+                        <h3 className="text-xl font-medium">Priority Tours</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(moreFilter2)}
                         </div>
                       </div>
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Property type</h3>
+                        <h3 className="text-xl font-medium">Tours Type</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(moreFilter3)}
-                        </div>
-                      </div>
-                      <div className="py-7">
-                        <h3 className="text-xl font-medium">House rules</h3>
-                        <div className="mt-6 relative ">
-                          {renderMoreFilterItem(moreFilter4)}
                         </div>
                       </div>
                     </div>
