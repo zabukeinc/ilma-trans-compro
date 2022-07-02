@@ -3,6 +3,7 @@ import { ComponentType } from "react";
 export interface LocationStates {
   "/"?: {};
   "/#"?: {};
+  '/admin'?: {};
   //
   "/listing-stay"?: {};
   "/listing-stay-map"?: {};

@@ -37,7 +37,7 @@ const SectionHero: FC<SectionHeroProps> = ({ className = '' }) => {
       </div>
 
       <div className="z-10 mb-12 lg:mb-0 lg:-mt-40 w-full">
-        <HeroSearchForm currentPage="Stay" currentTab="Rental car" />
+        <HeroSearchForm currentPage="Stay" currentTab="Stay" />
       </div>
     </div>
   )

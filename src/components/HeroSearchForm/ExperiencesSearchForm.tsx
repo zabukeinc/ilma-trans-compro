@@ -10,9 +10,7 @@ import { FC } from "react";
 const defaultLocationValue = "Tokyo, Jappan";
 const defaultDate = moment();
 const defaultGuestValue: GuestsInputProps["defaultValue"] = {
-  guestAdults: 2,
-  guestChildren: 2,
-  guestInfants: 1,
+  guests: 2,
 };
 
 export interface ExperiencesSearchFormProps {
